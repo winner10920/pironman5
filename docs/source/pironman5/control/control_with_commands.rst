@@ -44,37 +44,55 @@
 
 .. code-block::
 
-  usage: pironman5-service [-h] [-c] [-rc [RGB_COLOR]] [-rb [RGB_BRIGHTNESS]]
-                          [-rs [{solid,breathing,flow,flow_reverse,rainbow,rainbow_reverse,hue_cycle}]] [-rp [RGB_SPEED]]
-                          [-re [RGB_ENABLE]] [-rl [RGB_LED_COUNT]] [-u [{C,F}]] [-gm [GPIO_FAN_MODE]] [-gp [GPIO_FAN_PIN]]
-                          [{start,stop}]
 
-  Pironman5
+  usage: pironman5-service [-h] [-v] [-c] [-dl [{debug,info,warning,error,critical}]] [--background [BACKGROUND]] [-rd] [-cp [CONFIG_PATH]] [-rc [RGB_COLOR]] [-rb [RGB_BRIGHTNESS]]
+                          [-rs [{solid,breathing,flow,flow_reverse,rainbow,rainbow_reverse,hue_cycle}]] [-rp [RGB_SPEED]] [-re [RGB_ENABLE]] [-rl [RGB_LED_COUNT]] [-u [{C,F}]] [-gm [GPIO_FAN_MODE]] [-gp [GPIO_FAN_PIN]] [-oe [OLED_ENABLE]]
+                          [-od [OLED_DISK]] [-oi [OLED_NETWORK_INTERFACE]] [-or [{0,180}]]
+                          [{start,restart,stop}]
 
-  位置参数:
-    {start,stop}          控制命令
+  Pironman 5 command line interface
 
-  可选参数:
-    -h, --help            显示帮助信息并退出
-    -c, --config          显示当前配置
-    -rc [RGB_COLOR], --rgb-color [RGB_COLOR]
-                          以十六进制设置 RGB 颜色，可带或不带 '#'（如 #FF0000 或 00aabb）
-    -rb [RGB_BRIGHTNESS], --rgb-brightness [RGB_BRIGHTNESS]
-                          设置 RGB 亮度，范围为 0–100
-    -rs [{solid,breathing,flow,flow_reverse,rainbow,rainbow_reverse,hue_cycle}], --rgb-style [{...}]
-                          设置 RGB 显示样式
-    -rp [RGB_SPEED], --rgb-speed [RGB_SPEED]
-                          设置 RGB 动效速度，范围 0–100
-    -re [RGB_ENABLE], --rgb-enable [RGB_ENABLE]
-                          启用或关闭 RGB，True/False
-    -rl [RGB_LED_COUNT], --rgb-led-count [RGB_LED_COUNT]
-                          设置 RGB LED 的数量（整数）
-    -u [{C,F}], --temperature-unit [{C,F}]
-                          设置温度单位
-    -gm [GPIO_FAN_MODE], --gpio-fan-mode [GPIO_FAN_MODE]
-                          设置风扇模式，0: 始终开启，1: 高性能，2: 清凉，3: 平衡，4: 静音
-    -gp [GPIO_FAN_PIN], --gpio-fan-pin [GPIO_FAN_PIN]
-                          设置风扇 GPIO 引脚号
+  positional arguments:
+    {start,restart,stop}  Command
+
+  options:
+    -h, --help            show this help message and exit
+    -v, --version         Show version
+    -c, --config          Show config
+    -dl, --debug-level [{debug,info,warning,error,critical}]
+                          Debug level
+    --background [BACKGROUND]
+                          Run in background
+    -rd, --remove-dashboard
+                          Remove dashboard
+    -cp, --config-path [CONFIG_PATH]
+                          Config path
+    -rc, --rgb-color [RGB_COLOR]
+                          RGB color in hex format without # (e.g. 00aabb)
+    -rb, --rgb-brightness [RGB_BRIGHTNESS]
+                          RGB brightness 0-100
+    -rs, --rgb-style [{solid,breathing,flow,flow_reverse,rainbow,rainbow_reverse,hue_cycle}]
+                          RGB style
+    -rp, --rgb-speed [RGB_SPEED]
+                          RGB speed 0-100
+    -re, --rgb-enable [RGB_ENABLE]
+                          RGB enable True/False
+    -rl, --rgb-led-count [RGB_LED_COUNT]
+                          RGB LED count int
+    -u, --temperature-unit [{C,F}]
+                          Temperature unit
+    -gm, --gpio-fan-mode [GPIO_FAN_MODE]
+                          GPIO fan mode, 0: Always On, 1: Performance, 2: Cool, 3: Balanced, 4: Quiet
+    -gp, --gpio-fan-pin [GPIO_FAN_PIN]
+                          GPIO fan pin
+    -oe, --oled-enable [OLED_ENABLE]
+                          OLED enable True/true/on/On/1 or False/false/off/Off/0
+    -od, --oled-disk [OLED_DISK]
+                          Set to display which disk on OLED. 'total' or the name of the disk, like mmbclk or nvme
+    -oi, --oled-network-interface [OLED_NETWORK_INTERFACE]
+                          Set to display which ip of network interface on OLED, 'all' or the interface name, like eth0 or wlan0
+    -or, --oled-rotation [{0,180}]
+                          Set to rotate OLED display, 0, 180
 
 .. note::
 
