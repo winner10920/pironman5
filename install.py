@@ -34,7 +34,7 @@ settings = {
     'python_source': {
         'pironman5': './',
         'pm_auto': 'git+https://github.com/sunfounder/pm_auto.git@1.4.5',
-        'sf_rpi_status': 'git+https://github.com/sunfounder/sf_rpi_status.git@1.1.5',
+        'sf_rpi_status': 'git+https://github.com/sunfounder/sf_rpi_status.git@1.1.8',
     },
 
     # create symbolic links from venv/bin/ to /usr/local/bin/
@@ -152,7 +152,7 @@ dashboard_settings = {
 pipower5_settings = {
     # Install python packages from source
     'python_source': {
-        'pipower5': 'git+https://github.com/sunfounder/pipower5.git@1.2.x',
+        'pipower5': 'git+https://github.com/sunfounder/pipower5.git@1.2.3',
         'spc': 'git+https://github.com/sunfounder/spc.git',
     },
     # Add symbolic links
