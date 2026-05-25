@@ -89,10 +89,10 @@ class ConfigTxt(object):
 class SF_Installer():
     WORK_DIR = '/opt/{name}'
     GIT_URL = None
-    MAIN_GIT_URL = 'https://github.com/sunfounder/'
+    MAIN_GIT_URL = 'https://github.com/winner10920/'
     BACKUP_GIT_URLS = [
-        'https://github.com/sunfounder/',
-        'https://gitee.com/sunfounder/',
+        'https://github.com/winner10920/',
+        'https://gitee.com/winner10920/',
     ]
 
     APT_DEPENDENCIES = [
