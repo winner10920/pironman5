@@ -145,14 +145,14 @@ dashboard_settings = {
         'lsof', # for pm_dashboard
     ],
     'python_source': {
-        'pm_dashboard': 'git+https://github.com/sunfounder/pm_dashboard.git@1.3.x',
+        'pm_dashboard': 'git+https://github.com/sunfounder/pm_dashboard.git@1.3.16',
     },
 }
 
 pipower5_settings = {
     # Install python packages from source
     'python_source': {
-        'pipower5': 'git+https://github.com/sunfounder/pipower5.git@main',
+        'pipower5': 'git+https://github.com/sunfounder/pipower5.git@1.2.x',
         'spc': 'git+https://github.com/sunfounder/spc.git',
     },
     # Add symbolic links
