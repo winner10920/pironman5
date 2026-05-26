@@ -62,7 +62,7 @@ settings = {
     # - Install python source code from git
     'python_source': {
         'pironman5': './',
-        'pm_auto': f'git+https://github.com/winner10920/pm_auto.git@1.2.12',
+        'pm_auto': f'git+https://github.com/winner10920/pm_auto.git#1.2.x',
     },
 
     # - Setup config txt
