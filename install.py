@@ -55,9 +55,9 @@ settings = {
     ],
 
     # - Install from pip
-    # 'pip_dependencies': [
-    #     'gpiozero',
-    # ],
+     'pip_dependencies': [
+         'paho-mqtt',
+     ],
 
     # - Install python source code from git
     'python_source': {
