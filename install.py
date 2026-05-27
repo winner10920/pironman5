@@ -57,6 +57,7 @@ settings = {
     # - Install from pip
      'pip_dependencies': [
          'paho-mqtt',
+         'evdev',
      ],
 
     # - Install python source code from git
